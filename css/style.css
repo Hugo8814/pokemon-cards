@@ -32,3 +32,7 @@ html {
 
 .card {
   position: relative; }
+  .card__box {
+    width: 52rem;
+    height: 80rem;
+    background-color: red; }
