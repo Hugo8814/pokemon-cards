@@ -1,0 +1,37 @@
+.heading{
+    width: 192rem; 
+        height: 65vh;
+        background: radial-gradient(110% 50% at bottom, transparent 50%, rgba(51, 99, 175, .9) 51%),
+        url(/img/cards.webp) ;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 86% 80%, 68% 76%, 48% 74%, 27% 77%, 11% 81%, 0 86%);
+        
+        
+        
+
+    &__primary{
+        width: 110rem;
+        height:36rem ;
+       // margin-left: 45rem;
+       @include absCenter;
+       top: 19rem;
+       left: 48%;
+       
+       
+       
+       &--box{
+        width: 190rem;
+        height: 50%;
+        
+        
+       }
+       
+        
+
+    }
+    
+
+}
+.cards{
+   z-index: -1;
+    
+}

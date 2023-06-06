@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  background-color: RGB(255, 0, 1); }
+
+.heading {
+  width: 192rem;
+  height: 65vh;
+  background: radial-gradient(110% 50% at bottom, transparent 50%, rgba(51, 99, 175, 0.9) 51%), url(/img/cards.webp);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 86% 80%, 68% 76%, 48% 74%, 27% 77%, 11% 81%, 0 86%); }
+  .heading__primary {
+    width: 110rem;
+    height: 36rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 19rem;
+    left: 48%; }
+    .heading__primary--box {
+      width: 190rem;
+      height: 50%; }
+
+.cards {
+  z-index: -1; }
+
+.card {
+  position: relative; }
