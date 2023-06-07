@@ -31,8 +31,39 @@ html {
   z-index: -1; }
 
 .card {
-  position: relative; }
+  perspective: 150rem; }
   .card__box {
-    width: 52rem;
-    height: 80rem;
-    background-color: red; }
+    width: 80%;
+    height: 500rem;
+    margin-left: 10%;
+    position: relative; }
+  .card__side {
+    width: 40rem;
+    height: 52rem;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+    backface-visibility: hidden; }
+    .card__side--front {
+      width: 40rem;
+      height: 52rem;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .card__side--back {
+      width: 40rem;
+      height: 52rem;
+      background-color: green;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(180deg); }
+    .card__side:hover .card__side--front {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--back {
+      transform: rotateY(0);
+      transition: transform 800ms ease; }
