@@ -13,7 +13,7 @@ html {
   width: 192rem;
   height: 65vh;
   background: radial-gradient(110% 50% at bottom, transparent 50%, rgba(51, 99, 175, 0.9) 51%), url(/img/cards.webp);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 86% 80%, 68% 76%, 48% 74%, 27% 77%, 11% 81%, 0 86%); }
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 86% 80%, 69% 75%, 44% 74%, 24% 77%, 11% 81%, 0 86%); }
   .heading__primary {
     width: 110rem;
     height: 36rem;
@@ -40,19 +40,38 @@ html {
   .card__side {
     width: 40rem;
     height: 52rem;
-    background-color: blue;
     position: absolute;
     top: 0;
     left: 0;
     transition: all 0.5s ease-in;
-    backface-visibility: hidden; }
+    border-radius: 5px;
+    transition: transform 800ms ease; }
+    .card__side--sp {
+      width: 40rem;
+      height: 52rem;
+      background-image: url(https://assets.codepen.io/13471/sparkles.gif);
+      background-size: 100%;
+      z-index: 5;
+      opacity: 0.7;
+      position: absolute;
+      border-radius: 1.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      mix-blend-mode: color-dodge;
+      backface-visibility: visible; }
     .card__side--front {
       width: 40rem;
       height: 52rem;
       background-color: white;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-image: url(https://assets.codepen.io/13471/charizard-gx.webp);
+      background-size: 100%;
+      border-radius: 1.5rem; }
     .card__side--back {
       width: 40rem;
       height: 52rem;
@@ -60,10 +79,19 @@ html {
       position: absolute;
       top: 0;
       left: 0;
-      transform: rotateY(180deg); }
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
+      background-size: 100%;
+      border-radius: 1.9rem;
+      transform: rotateY(180deg);
+      z-index: 1; }
     .card__side:hover .card__side--front {
       transform: rotateY(-180deg);
       transition: transform 800ms ease; }
     .card__side:hover .card__side--back {
       transform: rotateY(0);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--sp {
+      transform: rotateY(-180deg);
       transition: transform 800ms ease; }
