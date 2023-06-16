@@ -30,14 +30,21 @@ html {
 .cards {
   z-index: -1; }
 
+.big-box {
+  display: flex;
+  height: 140rem;
+  position: relative;
+  perspective: 150rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly; }
+
 .card {
   perspective: 150rem; }
   .card__box {
-    width: 80%;
-    height: 55.5rem;
-    margin-left: 10%;
-    position: relative;
-    display: flex; }
+    width: 40rem;
+    height: 55rem;
+    transition: transform 800ms ease; }
   .card__side {
     width: 40rem;
     height: 55.5rem;
@@ -54,7 +61,7 @@ html {
       border-radius: 1.5rem;
       mix-blend-mode: color-dodge;
       backface-visibility: visible; }
-    .card__side--sp-2, .card__side--sp-3, .card__side--sp-4 {
+    .card__side--sp-2, .card__side--sp-3, .card__side--sp-4, .card__side--sp-5 {
       width: 40rem;
       height: 55.5rem;
       background-image: url(https://assets.codepen.io/13471/sparkles.gif);
@@ -68,14 +75,13 @@ html {
       width: 40rem;
       height: 55.5rem;
       position: absolute;
-      top: 0;
-      left: 0;
       backface-visibility: hidden;
       transition: transform 800ms ease;
       background-size: 100%;
       border-radius: 1.5rem;
       background-image: url(https://assets.codepen.io/13471/charizard-gx.webp); }
     .card__side--front-2 {
+      position: absolute;
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -84,6 +90,7 @@ html {
       border-radius: 1.5rem;
       background-image: url(https://assets.codepen.io/13471/eevee-gx.webp); }
     .card__side--front-3 {
+      position: absolute;
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -92,6 +99,7 @@ html {
       border-radius: 1.5rem;
       background-image: url(https://assets.codepen.io/13471/mewtwo-gx.webp); }
     .card__side--front-4 {
+      position: absolute;
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -99,6 +107,42 @@ html {
       background-size: 100%;
       border-radius: 1.5rem;
       background-image: url(https://assets.codepen.io/13471/pikachu-gx.webp); }
+    .card__side--front-5 {
+      position: absolute;
+      width: 40rem;
+      height: 55.5rem;
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-size: 100%;
+      border-radius: 1.5rem;
+      background-image: url(../img/alaka.png); }
+    .card__side--front-6 {
+      position: absolute;
+      width: 40rem;
+      height: 55.5rem;
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-size: 100%;
+      border-radius: 1.5rem;
+      background-image: url(../img/6.png); }
+    .card__side--front-7 {
+      position: absolute;
+      width: 40rem;
+      height: 55.5rem;
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-size: 100%;
+      border-radius: 1.5rem;
+      background-image: url(../img/s.png); }
+    .card__side--front-8 {
+      position: absolute;
+      width: 40rem;
+      height: 55.5rem;
+      backface-visibility: hidden;
+      transition: transform 800ms ease;
+      background-size: 100%;
+      border-radius: 1.5rem;
+      background-image: url(../img/m.png); }
     .card__side--back-1 {
       width: 40rem;
       height: 55.5rem;
@@ -109,6 +153,7 @@ html {
       background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
       transform: rotateY(180deg); }
     .card__side--back-2 {
+      transform: rotateY(180deg);
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -117,6 +162,7 @@ html {
       border-radius: 1.9rem;
       background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg); }
     .card__side--back-3 {
+      transform: rotateY(180deg);
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -125,6 +171,7 @@ html {
       border-radius: 1.9rem;
       background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg); }
     .card__side--back-4 {
+      transform: rotateY(180deg);
       width: 40rem;
       height: 55.5rem;
       backface-visibility: hidden;
@@ -133,6 +180,15 @@ html {
       border-radius: 1.9rem;
       background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg); }
     .card__side:hover .card__side--front-1 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--front-6 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--front-7 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--front-8 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease; }
     .card__side:hover .card__side--back-1 {
@@ -166,5 +222,14 @@ html {
       transform: rotateY(0);
       transition: transform 800ms ease; }
     .card__side:hover .card__side--sp-4 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--front-5 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--back-5 {
+      transform: rotateY(0);
+      transition: transform 800ms ease; }
+    .card__side:hover .card__side--sp-5 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease; }

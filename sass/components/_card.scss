@@ -1,16 +1,25 @@
+.big-box {
+  display: flex;
+  height:140rem;
+  position: relative;
+ 
+  perspective: 150rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
 .card {
   perspective: 150rem;
 
   &__box {
-    width: 80%;
-    height: 55.5rem;
-    margin-left: 10%;
-    position: relative;
-    display: flex;
+    width: 40rem;
+    height: 55rem;
+    transition: transform 800ms ease;
+    
   }
 
   &__side {
-    
     width: 40rem;
     height: 55.5rem;
     transition: all 0.5s ease-in;
@@ -18,7 +27,7 @@
     transition: transform 800ms ease;
 
     &--sp {
-      &-1{
+      &-1 {
         width: 40rem;
         height: 55.5rem;
         background-image: url(https://assets.codepen.io/13471/sparkles.gif);
@@ -28,13 +37,12 @@
         border-radius: 1.5rem;
         mix-blend-mode: color-dodge;
         backface-visibility: visible;
-
       }
-     
 
       &-2,
       &-3,
-      &-4 {
+      &-4,
+      &-5 {
         width: 40rem;
         height: 55.5rem;
         background-image: url(https://assets.codepen.io/13471/sparkles.gif);
@@ -48,22 +56,21 @@
     }
 
     &--front {
-      &-1{
+      &-1 {
         width: 40rem;
-      height: 55.5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      backface-visibility: hidden;
-      transition: transform 800ms ease;
-      background-size: 100%;
-      border-radius: 1.5rem;
-      background-image: url(https://assets.codepen.io/13471/charizard-gx.webp);
-
-      }
-      
-      &-2 {
+        height: 55.5rem;
+        position: absolute;
         
+
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100%;
+        border-radius: 1.5rem;
+        background-image: url(https://assets.codepen.io/13471/charizard-gx.webp);
+      }
+
+      &-2 {
+        position: absolute;
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -73,6 +80,7 @@
         background-image: url(https://assets.codepen.io/13471/eevee-gx.webp);
       }
       &-3 {
+        position: absolute;
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -82,6 +90,7 @@
         background-image: url(https://assets.codepen.io/13471/mewtwo-gx.webp);
       }
       &-4 {
+        position: absolute;
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -90,23 +99,52 @@
         border-radius: 1.5rem;
         background-image: url(https://assets.codepen.io/13471/pikachu-gx.webp);
       }
+      &-5 {
+        position: absolute;
+        width: 40rem;
+        height: 55.5rem;
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100%;
+        border-radius: 1.5rem;
+        background-image: url(../img/alaka.png);
+      }
+      &-6 {
+        position: absolute;
+        width: 40rem;
+        height: 55.5rem;
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100%;
+        border-radius: 1.5rem;
+        background-image: url(../img/6.png);
+      }
+      &-7 {
+        position: absolute;
+        width: 40rem;
+        height: 55.5rem;
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100%;
+        border-radius: 1.5rem;
+        background-image: url(../img/s.png);
+      }
+      &-8 {
+        position: absolute;
+        width: 40rem;
+        height: 55.5rem;
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100% ;
+        
+       
+        border-radius: 1.5rem;
+        background-image: url(../img/m.png);
+      }
     }
 
-    &--back  {
-      &-1{
-        width: 40rem;
-      height: 55.5rem;
-      backface-visibility: hidden;
-      transition: transform 800ms ease;
-      background-size: 100%;
-      border-radius: 1.9rem;
-      background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-
-      transform: rotateY(180deg);
-
-      }
-      
-      &-2 {
+    &--back {
+      &-1 {
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -114,9 +152,22 @@
         background-size: 100%;
         border-radius: 1.9rem;
         background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-        
+
+        transform: rotateY(180deg);
+      }
+
+      &-2 {
+        transform: rotateY(180deg);
+        width: 40rem;
+        height: 55.5rem;
+        backface-visibility: hidden;
+        transition: transform 800ms ease;
+        background-size: 100%;
+        border-radius: 1.9rem;
+        background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
       }
       &-3 {
+        transform: rotateY(180deg);
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -124,9 +175,9 @@
         background-size: 100%;
         border-radius: 1.9rem;
         background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-        
       }
       &-4 {
+        transform: rotateY(180deg);
         width: 40rem;
         height: 55.5rem;
         backface-visibility: hidden;
@@ -134,66 +185,92 @@
         background-size: 100%;
         border-radius: 1.9rem;
         background-image: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-       
       }
+      
     }
 
-    &:hover &--front-1{
+    &:hover &--front-1 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+    &:hover &--front-6 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+    &:hover &--front-7 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+    &:hover &--front-8 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease;
     }
 
-    &:hover &--back-1{
+    &:hover &--back-1 {
       transform: rotateY(0);
       transition: transform 800ms ease;
     }
 
-    &:hover &--sp-1{
-      transform: rotateY(-180deg);
-      transition: transform 800ms ease;
-    }
-    
-    &:hover &--front-2{
+    &:hover &--sp-1 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease;
     }
 
-    &:hover &--back-2{
+    &:hover &--front-2 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+
+    &:hover &--back-2 {
       transform: rotateY(0);
       transition: transform 800ms ease;
     }
 
-    &:hover &--sp-2{
-      transform: rotateY(-180deg);
-      transition: transform 800ms ease;
-    }
-    
-    &:hover &--front-3{
+    &:hover &--sp-2 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease;
     }
 
-    &:hover &--back-3{
+    &:hover &--front-3 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+
+    &:hover &--back-3 {
       transform: rotateY(0);
       transition: transform 800ms ease;
     }
 
-    &:hover &--sp-3{
-      transform: rotateY(-180deg);
-      transition: transform 800ms ease;
-    }
-    
-    &:hover &--front-4{
+    &:hover &--sp-3 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease;
     }
 
-    &:hover &--back-4{
+    &:hover &--front-4 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+
+    &:hover &--back-4 {
       transform: rotateY(0);
       transition: transform 800ms ease;
     }
 
-    &:hover &--sp-4{
+    &:hover &--sp-4 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+    &:hover &--front-5 {
+      transform: rotateY(-180deg);
+      transition: transform 800ms ease;
+    }
+
+    &:hover &--back-5 {
+      transform: rotateY(0);
+      transition: transform 800ms ease;
+    }
+
+    &:hover &--sp-5 {
       transform: rotateY(-180deg);
       transition: transform 800ms ease;
     }
